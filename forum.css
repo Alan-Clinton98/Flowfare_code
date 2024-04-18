@@ -1,0 +1,155 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  /* Soft background to complement the vibrant theme */
+  color: #333;
+}
+
+.auth-form,
+.container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 10px;
+  /* Rounded corners for a modern look */
+  padding: 25px;
+  margin: 40px auto;
+  /* Centering forms */
+  transition: all 0.3s ease;
+  /* Smooth transition for interactions */
+}
+
+.auth-form:hover,
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form {
+  width: 320px;
+}
+
+.container {
+  max-width: 850px;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  /* Thicker border for prominence */
+  border-radius: 5px;
+  /* Slightly rounded edges */
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  /* Highlighting focus */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #03a4ed;
+  /* Bright blue focus */
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #ff4d61;
+  /* Vibrant pink for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* Consistency with input fields */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Smooth color change */
+}
+
+button:hover {
+  background-color: #e64556;
+  /* Slightly darker shade on hover */
+}
+
+#forum-section {
+  margin-top: 30px;
+}
+
+#forum-section header {
+  background-color: #03a4ed;
+  /* Bright blue header */
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+#forum-section header button {
+  background-color: #ff4d61;
+  /* Vibrant pink for the logout button */
+  border-radius: 4px;
+}
+
+#forum-section header button:hover {
+  background-color: #e64556;
+}
+
+#new-thread-form {
+  margin-top: 20px;
+  border-top: 2px dashed #ccc;
+  /* Stylish separation */
+  padding-top: 20px;
+}
+
+.thread {
+  border-bottom: 1px solid #e2e2e2;
+  /* Lighter for contrast */
+  padding: 20px 0;
+}
+
+.thread h3,
+.thread p,
+.thread small {
+  margin: 12px 0;
+  /* Improved spacing for readability */
+}
+
+/* Responsive adjustments for better mobile experience */
+@media (max-width: 600px) {
+
+  .auth-form,
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  header,
+  #forum-section header {
+    padding: 15px;
+  }
+}
+
+
+
+  #logout-btn,
+  #new-thread-form button {
+    max-width: 250px; /* or whatever maximum width looks good */
+    width: auto; /* This ensures the button's width is content-dependent */
+    padding: 10px 20px; /* Adjust padding to ensure content is centered and has space */
+    margin: 10px auto; /* 'auto' will center the button if the parent is block-level */
+    display: block; /* Change to block to allow auto margins to center the button */
+  }
+
+  #logout-btn:hover,
+  #new-thread-form button:hover {
+    background-color: #e64556; /* A slightly darker shade on hover */
+  }
+

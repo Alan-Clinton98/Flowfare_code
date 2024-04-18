@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Activity Planner</title>
+  <link rel="stylesheet" href="activity.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Activity Planner</h1>
+    <button id="showModal">Add New Activity</button>
+    <div id="activitiesList" class="activities-list"></div>
+  </div>
+
+  <!-- Modal for adding activity -->
+  <div id="activityModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="activityForm">
+        <label for="dateInput">Date:</label>
+        <input type="date" id="dateInput" required>
+        <label for="activityInput">Activity:</label>
+        <input type="text" id="activityInput" placeholder="Describe the activity..." required>
+        <button type="submit">Add Activity</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="activity.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+body.night-mode {
+  background-color: #161616;
+}
+
+body,
+h1,
+form p,
+h2,
+legend,
+label,
+form p {
+  transition: all 500ms ease-out;
+}
+
+
+/* For Dark Mode */
+body.night-mode .dark-mode p,
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode legend,
+body.night-mode label,
+body.night-mode form p {
+  color: #fff;
+}
+
+.dark-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dark-mode-switcher {
+  height: 30px;
+  width: 60px;
+  background-color: transparent;
+  border: 1px solid #d1d1d1;
+  padding: 0px 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode-switcher i:first-child {
+  color: yellow;
+  font-size: 18px;
+}
+
+.dark-mode-switcher i:last-child {
+  color: #161616;
+  font-size: 18px;
+}
+
+.dark-mode-switcher span {
+  display: block;
+  background-color: #1C8BF2;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  transition: all 500ms ease-out;
+  position: absolute;
+}
+
+.dark-mode p {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dark-mode-switcher.active>span {
+  transform: translateX(25px);
+  background-color: gold;
+}
+
+/* End Dark Mode */
+
+input[type="radio"] {
+  height: 40px;
+  width: 40px;
+}
+
+#cyan {
+  background-color: #1C8BF2;
+}
+
+#orange {
+  background-color: #EE5E44;
+}
+
+#green {
+  background-color: #2EAD0B;
+}
+
+#purple {
+  background-color: #740BAD;
+}
+
+
+fieldset {
+  overflow: hidden;
+  position: relative;
+}
+
+a.fork-me {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+a.fork-me i {
+  font-size: 40px;
+  color: #fff;
+  position: relative;
+  right: 7px;
+  transition: all 250ms linear;
+}
+
+a.fork-me::before {
+  content: "";
+  display: block;
+  background-color: #161616b2;
+  width: 100px;
+  height: 150px;
+  transform: skewY(45deg);
+  position: absolute;
+  top: -100px;
+  right: 0;
+  transition: all 250ms linear;
+}
+
+a.fork-me:hover i {
+  color: #1C8BF2;
+}
+
+body.night-mode a.fork-me::before {
+  background-color: #dadada71;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+
+
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+}
